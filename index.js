@@ -29,6 +29,8 @@ module.exports = function (file, opts) {
     var matches = fileName.match(/\.(zip|tar)$|\.(tar).gz$/);
     if (matches !== null) {
         archiveType = matches[1] || matches[2];
+    } else {
+        throw new PluginError('gulp-archiver', 'Unsupported archive type for gulp-archiver');
     }
 
     var archive = archiver.create(archiveType, opts);
@@ -45,10 +47,12 @@ module.exports = function (file, opts) {
         }
 
         // Add to archive
-        if (file.contents === null) {
-            archive.file(file.path);
+        if (file.isNull()) { // directories or file with empty .contents field
+            if (file.relative.length) {
+                archive.file(file.path, {name: file.relative});
+            }
         } else {
-            archive.append(file.contents, {name: path.basename(file.path)});
+            archive.append(file.contents, {name: file.relative});
         }
 
         cb();
