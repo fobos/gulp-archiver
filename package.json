@@ -1,7 +1,7 @@
 {
   "name": "gulp-archiver",
   "version": "1.0.0",
-  "description": "Gulp plugin for npm/archiver.",
+  "description": "Archive anything through gulp",
   "author": "Alexander Biryukov <alex.biryukoff@gmail.com>",
   "repository": "fobos/gulp-archiver",
   "main": "index.js",
