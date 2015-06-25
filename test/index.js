@@ -9,7 +9,6 @@ var assert = require('stream-assert');
 var vinylAssign = require('vinyl-assign');
 var unzip = require('decompress-unzip');
 var tar = require('tar');
-var through = require('through2')
 
 var fixtures = function (glob) {
     return path.join(__dirname, 'fixtures', glob);
