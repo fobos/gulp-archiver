@@ -14,6 +14,8 @@ gulp.task('default', function () {
 });
 ```
 
+Plugin uses [archiver](https://www.npmjs.org/package/archiver) npm package to make archive. 
+
 ## API
 
 ### archiver(filename[, options])
