@@ -16,15 +16,15 @@
     "gulp"
   ],
   "dependencies": {
-    "archiver": "^0.14.4",
+    "archiver": "^2.1.1",
     "concat-stream": "^1.5.0",
     "gulp-util": "^3.0.5",
     "through2": "^0.6.5"
   },
   "devDependencies": {
     "decompress-unzip": "^3.2.2",
-    "gulp": "^3.9.0",
-    "mocha": "^2.2.5",
+    "gulp": "^4.0.0",
+    "mocha": "^5.2.0",
     "should": "^7.0.1",
     "stream-assert": "^2.0.2",
     "tar": "^2.1.1",
